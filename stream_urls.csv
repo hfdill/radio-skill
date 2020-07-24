@@ -1,0 +1,6 @@
+SWR1,http://mp3-live.swr.de/swr1bw_s.m3u
+SWR2,http://mp3-live.swr.de/swr2_m.m3u
+SWR3,http://mp3-live.swr3.de/swr3_m.m3u
+SWR4,http://mp3-live.swr.de/swr4bw_m.m3u
+DLF,http://st01.dlf.de/dlf/01/128/mp3/stream.mp3
+DLF-Kultur,http://st02.dlf.de/dlf/02/128/mp3/stream.mp3
