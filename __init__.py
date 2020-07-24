@@ -1,36 +1,34 @@
 import sys
 from os.path import dirname, abspath
+
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill
 from mycroft.util.log import getLogger
-from mycroft.util import play_mp3
 import time
 import subprocess
-import vlc
-  
+
+from mycroft.util.log import getLogger
+
 sys.path.append(abspath(dirname(__file__)))
-stream_data = __import__('stream_data')
+streams = __import__('streams')
 
 logger = getLogger(__name__)
 
-#__author__ = 'tjoen'
-# modified by hfdill to fix bugs and make it play requested broadcast station
-# player changed to vlc
 __author__ = 'tjoen'
 
 
-class Radio(MycroftSkill):
+class DutchRadio(MycroftSkill):
     def __init__(self):
-        super(Radio, self).__init__('Radio')
-        self.stream_data = stream_data.DutchRadio()
+        super(DutchRadio, self).__init__('Dutch Radio')
+        self.streams = streams.DutchRadio()
         self.process = None
 
     def initialize(self):
-        logger.info('initializing Radio')
+        logger.info('initializing DutchRadio')
         self.load_data_files(dirname(__file__))
-        super(Radio, self).initialize()
+        super(DutchRadio, self).initialize()
 
-        for c in self.stream_data.channels.keys():
+        for c in self.streams.channels.keys():
             self.register_vocabulary(c, 'ChannelKeyword')
         intent = IntentBuilder('PlayChannelIntent' + self.name)\
             .require('PlayKeyword')\
@@ -50,20 +48,19 @@ class Radio(MycroftSkill):
            should always be called before the skill starts playback.
         """
         logger.info('Stopping currently playing media if any')
-        if self.process:
-            self.stop()
+        #if self.process:
+        #    self.stop()
 
     def play(self):
         self.before_play()
-        self.speak_dialog('Tuning to requested station', {'channel_name': self.channel})
-        
-#        time.sleep(3)
-        stream_url = self.stream_data.channels[self.channel].stream_url
-        self.process = subprocess.Popen(['cvlc', stream_url])
-        
+        self.speak_dialog('listening_to', {'channel': self.channel})
+        time.sleep(2)
+        stream_url = self.streams.channels[self.channel].stream_url
+        self.process = subprocess.Popen(['mpg123', stream_url])
+
     def get_available(self, channel_name):
         logger.info(channel_name)
-        if channel_name in self.stream_data:
+        if channel_name in self.streams:
             logger.info('Registring play intention...')
             return channel_name
         else:
@@ -94,4 +91,4 @@ class Radio(MycroftSkill):
 
 
 def create_skill():
-    return Radio()
+    return DutchRadio()
