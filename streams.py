@@ -12,7 +12,7 @@ class Channel():
 class DutchRadio():
     def __init__(self):
         indx = 0
-        r = open('/opt/mycroft/skills/radio-skill/stream_urls.csv', 'r')
+        r = open('/opt/mycroft/skills/radio-skill.hfdill/stream_urls.csv', 'r')
         reader = csv.reader(r, delimiter=',')
         channellist = list(reader)
         self.channels = {}
