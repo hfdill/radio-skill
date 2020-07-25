@@ -6,12 +6,11 @@ Plays internet radio stations with links extracted from a manually configured pl
 This skill streams radio from urls.
 Change the csv to add or change channels in to your own language.
 
-It is based upon https://github.com/forslund/mycroft-media-skills/tree/master/swedishradio and
-https://github.com/tjoen/skill-dutch-radio
-Player changed to VLC to directly handle m3u and other file formats.
+It is based upon https://github.com/tjoen/skill-dutch-radio
+Player may be changed to VLC to directly handle m3u and other file formats.
 ## Examples
 * "Stream"
-* "Play"
+* "Tune to"
 
 ## Credits
 hfdill
