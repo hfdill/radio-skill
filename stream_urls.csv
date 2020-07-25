@@ -1,6 +1,21 @@
-SWR1,http://mp3-live.swr.de/swr1bw_s.m3u
-SWR2,http://mp3-live.swr.de/swr2_m.m3u
-SWR3,http://mp3-live.swr3.de/swr3_m.m3u
-SWR4,http://mp3-live.swr.de/swr4bw_m.m3u
-DLF,http://st01.dlf.de/dlf/01/128/mp3/stream.mp3
+DLF1,http://st01.dlf.de/dlf/01/128/mp3/stream.mp3
 DLF-Kultur,http://st02.dlf.de/dlf/02/128/mp3/stream.mp3
+SWR1,http://swr-swr1-bw.cast.addradio.de/swr/swr1/bw/mp3/64/stream.mp3
+SWR2,http://swr-swr2-live.cast.addradio.de/swr/swr2/live/mp3/256/stream.mp3
+SWR3,http://swr-swr3-live.cast.addradio.de/swr/swr3/live/mp3/128/stream.mp3
+SWR4,http://swr-swr4-bw.cast.addradio.de/swr/swr4/bw/mp3/128/stream.mp3
+HR1,http://hr-hr1-live.cast.addradio.de/hr/hr1/live/mp3/128/stream.mp3
+HR2,http://hr-hr2-live.cast.addradio.de/hr/hr2/live/mp3/128/stream.mp3
+HR3,http://hr-hr3-live.cast.addradio.de/hr/hr3/live/mp3/128/stream.mp3
+HR4,http://hr-hr4-live.cast.addradio.de/hr/hr4/live/mp3/128/stream.mp3
+HR-Info,http://hr-hrinfo-live.cast.addradio.de/hr/hrinfo/live/mp3/128/stream.mp3
+BBC1,http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p
+BBC2,http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio2_mf_p
+BBC3,http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p
+BBC4,http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio4fm_mf_p
+BBC5,http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio5live_mf_p
+BBC6,http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p
+BBC1Xtra,http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1xtra_mf_p
+BBC World Service,http://bbcwssc.ic.llnwd.net/stream/bbcwssc_mp1_ws-eieuk
+Radio-Caroline,http://78.129.202.200:8030
+Radio-North-Sea,http://109.169.54.86:8044/stream
