@@ -17,14 +17,14 @@ logger = getLogger(__name__)
 __author__ = 'tjoen'
 
 
-class DutchRadio(MycroftSkill):
+class MyRadio(MycroftSkill):
     def __init__(self):
-        super(DutchRadio, self).__init__('Dutch Radio')
-        self.streams = streams.DutchRadio()
+        super(MyRadio, self).__init__('My Radio')
+        self.streams = streams.MyRadio()
         self.process = None
 
     def initialize(self):
-        logger.info('initializing DutchRadio')
+        logger.info('initializing MyRadio')
         self.load_data_files(dirname(__file__))
         super(DutchRadio, self).initialize()
 
@@ -91,4 +91,4 @@ class DutchRadio(MycroftSkill):
 
 
 def create_skill():
-    return DutchRadio()
+    return MyRadio()
